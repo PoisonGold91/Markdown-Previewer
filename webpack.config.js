@@ -4,8 +4,9 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
   entry: './src/index.js',
   output: {
-    path: path.resolve(__dirname, 'dist'),
+    path: path.resolve(__dirname, 'build'), // Changed to 'build'
     filename: 'bundle.js',
+    publicPath: '/' // Important for proper routing
   },
   module: {
     rules: [
@@ -28,9 +29,10 @@ module.exports = {
     }),
   ],
   devServer: {
-    static: path.join(__dirname, 'dist'),
+    static: path.join(__dirname, 'build'), // Changed to 'build'
     port: 3000,
     open: true,
+    historyApiFallback: true, // Support for SPA routing
   },
   resolve: {
     extensions: ['.js', '.jsx'],
