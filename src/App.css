@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .app {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .editor-container, .preview-container {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  #editor {
+    width: 100%;
+    min-height: 400px;
+    resize: vertical;
+    font-family: monospace;
+    padding: 10px;
+    border: 1px solid #ddd;
+  }
+  
+  #preview {
+    border: 1px solid #ddd;
+    min-height: 400px;
+    overflow-y: auto;
+    background-color: #f9f9f9;
+  }
+  
+  #preview img {
+    max-width: 100%;
+    height: auto;
+  }
+  
+  #preview code {
+    background-color: #f4f4f4;
+    padding: 2px 4px;
+    border-radius: 4px;
+  }
+  
+  #preview pre {
+    background-color: #f4f4f4;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+  }
